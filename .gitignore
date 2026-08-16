@@ -13,3 +13,4 @@ bot_backup.py
 
 *.log
 *.env
+*.local.txt
