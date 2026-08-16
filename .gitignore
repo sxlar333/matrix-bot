@@ -1,0 +1,15 @@
+.venv/
+.env
+.env.*
+.DS_Store
+admin.py
+boring.db
+greg.db
+*.log
+greg.session
+old.db
+__pycache__/
+bot_backup.py
+
+*.log
+*.env

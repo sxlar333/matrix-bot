@@ -1,0 +1,21 @@
+[Unit]
+Description=Greg Matrix chatbot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/matrix-bot
+ExecStart=%h/matrix-bot/.venv/bin/python bot.py
+
+# Restart=always is required for hot reloading:
+# Greg exits when his source files change and systemd brings him back.
+Restart=always
+RestartSec=2
+
+# Beta switch for hot reloading (default off).
+# Remove this line to disable the feature.
+Environment=GREG_HOT_RELOAD=true
+
+[Install]
+WantedBy=multi-user.target
